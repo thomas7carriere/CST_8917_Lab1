@@ -1,0 +1,4 @@
+1. Your Choice: Azure Cosmos DB (serverless).
+2. Justification: Cosmos DB stores data as JSON, so it matches the analysis output without being modified. Serverless pricing fits well with Azure Functions since both only charge when used. There's a Python SDK for it, and querying past results for the history endpoint should be easy.
+3. Alternatives Considered: I looked at Table Storage but it didn't seem as good for nested JSON data. SQL Database would need a schema set up first. Blob Storage could work but has no real query support, so getting history would be a pain.
+4. Cost Considerations: Serverless Cosmos DB only charges for what you use (RUs + storage), no minimum cost. Also has a free tier (1000 RU/s, 25GB) which should cover the lab.
